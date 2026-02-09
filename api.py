@@ -90,7 +90,7 @@ async def root():
         </head>
         <body>
             <div class="container">
-                <h1>📰 Reuters AI System</h1>
+                <h1>Reuters AI System</h1>
                 <p>Protected Corporate System.</p>
                 <a href="/predict-ui" class="btn">Login to Tool</a>
             </div>
@@ -100,9 +100,7 @@ async def root():
 
 @app.get("/predict-ui", response_class=HTMLResponse, tags=["UI"])
 async def predict_ui(creds: HTTPBasicCredentials = Depends(verify_credentials)):
-    """
-    PROTECTED PAGE: Browser asks for User/Pass.
-    """
+   
     return f"""
     <html>
         <head>
@@ -122,7 +120,7 @@ async def predict_ui(creds: HTTPBasicCredentials = Depends(verify_credentials)):
         <body>
             <div class="card">
                 <span class="user-badge">👤 User: {creds.username}</span>
-                <h2>🚀 News Analyzer Tool</h2>
+                <h2> News Analyzer Tool</h2>
                 <p>Paste your article text below:</p>
                 <textarea id="newsInput" placeholder="Type news here..."></textarea>
                 <button onclick="analyze()">Analyze Topic</button>

@@ -1,4 +1,11 @@
+Reuters News Classifier AI
 
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.109-green)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15-orange)
+![Status](https://img.shields.io/badge/Status-Production--Ready-brightgreen)
+
+---
 ##  Project Overview
 This is a production-ready AI service capable of classifying Reuters news articles into **46 distinct topics** (e.g., Earnings, Acquisitions, Crude Oil). 
 
@@ -28,7 +35,7 @@ pip install -r requirements.txt
 uvicorn api:app --reload
 
 
-## 📖 API Documentation
+## API Documentation
 
 | Endpoint | Method | Description | Auth Required |
 | --- | --- | --- | --- |
@@ -40,7 +47,7 @@ uvicorn api:app --reload
 
 
 
-## 🔐 Access Credentials
+## Access Credentials
 
 The system is protected. Use these credentials to access the UI and API:
 
@@ -48,7 +55,7 @@ The system is protected. Use these credentials to access the UI and API:
 * **Password:** `password123`
 
 
-## 🧠 Model Architecture
+## Model Architecture
 
 * **Input Layer:** Vectorized text (10,000 dimensions).
 * **Hidden Layers:** Dense layers with ReLU activation and Dropout for regularization.
@@ -58,7 +65,7 @@ The system is protected. Use these credentials to access the UI and API:
 
 
 
-## 📂 Project Structure
+## Project Structure
 
 reuters-ann-project/
 ├── api.py              # Main FastAPI application (Endpoints & Security)
